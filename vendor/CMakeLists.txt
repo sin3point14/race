@@ -1,0 +1,15 @@
+set(GLFW_BUILD_EXAMPLES "OFF")
+set(GLFW_BUILD_TESTS "OFF")
+set(GLFW_BUILD_DOCS "OFF")
+set(GLFW_INSTALL "OFF")
+add_subdirectory(glfw)
+unset(GLFW_BUILD_EXAMPLES)
+unset(GLFW_BUILD_TESTS)
+unset(GLFW_BUILD_DOCS)
+unset(GLFW_INSTALL)
+
+set(BUILD_STATIC_LIBS "ON")
+add_subdirectory(glm)
+unset(BUILD_STATIC_LIBS)
+
+find_package(Vulkan)
