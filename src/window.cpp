@@ -22,7 +22,10 @@ Window::Window() {
         return glfwCreateWindowSurface(instance, m_Window, nullptr, &surface) == VK_SUCCESS;
     };
 
-    m_Renderer.reset(new Renderer(glfwExtensions, glfwExtensionCount, surfaceCreator));
+    int width, height;
+    glfwGetFramebufferSize(m_Window, &width, &height);
+
+    m_Renderer.reset(new Renderer(glfwExtensions, glfwExtensionCount, surfaceCreator, width, height));
 
 }
 
