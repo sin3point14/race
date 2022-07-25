@@ -1,7 +1,8 @@
-#include "renderer.h"
-#include <iostream>
-#include <set>
-#include <algorithm>
+module;
+
+#include <vulkan/vulkan.h>
+
+module Renderer;
 
 void Renderer::createInstance(const char** extensions, uint32_t extensionsCount) {
     if (s_EnableValidationLayers) {

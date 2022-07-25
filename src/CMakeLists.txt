@@ -1,4 +1,4 @@
-file(GLOB_RECURSE RaceSources **.cpp **.h)
+file(GLOB_RECURSE RaceSources **.cpp **.ixx)
 
 add_executable(Race ${RaceSources})
 

@@ -1,5 +1,11 @@
-#include "window.h"
-#include <iostream>
+module;
+
+#define GLFW_INCLUDE_VULKAN
+#include <GLFW/glfw3.h>
+
+module Window;
+
+import <iostream>;
 
 Window::Window() {
     glfwInit();
